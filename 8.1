@@ -1,0 +1,16 @@
+print('Задание 8.1')
+def d(text):
+    alphabet = 'абвгдежзийклмнопрстуфхцчшщъыьэюя'
+    text = text.lower()
+    count = {letter: 0 for letter in alphabet}
+    total = 0
+    for char in text:
+        if char in alphabet:
+            count[char] += 1
+            total += 1
+    itog = {letter: count / total for letter, count in count.items() if total > 0}
+    return itog
+    
+text = "Ваш текст здесь"
+itog = d(text)
+print(itog)
